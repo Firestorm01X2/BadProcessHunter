@@ -8,6 +8,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using BadProcessHunter.Classes;
+using System.Threading;
 
 namespace BadProcessHunter
 {
@@ -183,7 +184,14 @@ namespace BadProcessHunter
             {
                 AddMessage("Запускаем: " + startFilePath);
                 hunter.StartProcess(startFilePath);
+                Thread.Sleep(2000);
+                if (chbCloseAfterRun.Checked)
+                {
+                    this.Close();
+                }
             }
+
+            
 
         }
 

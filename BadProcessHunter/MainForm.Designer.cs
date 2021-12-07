@@ -41,6 +41,7 @@
             this.chbStartFile = new System.Windows.Forms.CheckBox();
             this.tbStartFilePath = new System.Windows.Forms.TextBox();
             this.btSelectFileToRun = new System.Windows.Forms.Button();
+            this.chbCloseAfterRun = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudCheclInterval)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,22 +95,27 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbInfo.BackColor = System.Drawing.SystemColors.Window;
-            this.tbInfo.Location = new System.Drawing.Point(4, 150);
+            this.tbInfo.Location = new System.Drawing.Point(4, 188);
             this.tbInfo.Multiline = true;
             this.tbInfo.Name = "tbInfo";
             this.tbInfo.ReadOnly = true;
             this.tbInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbInfo.Size = new System.Drawing.Size(391, 95);
+            this.tbInfo.Size = new System.Drawing.Size(391, 137);
             this.tbInfo.TabIndex = 4;
             // 
             // nudCheclInterval
             // 
             this.nudCheclInterval.Location = new System.Drawing.Point(4, 67);
+            this.nudCheclInterval.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.nudCheclInterval.Name = "nudCheclInterval";
             this.nudCheclInterval.Size = new System.Drawing.Size(134, 20);
             this.nudCheclInterval.TabIndex = 1;
             this.nudCheclInterval.Value = new decimal(new int[] {
-            10,
+            120,
             0,
             0,
             0});
@@ -163,11 +169,24 @@
             this.btSelectFileToRun.UseVisualStyleBackColor = true;
             this.btSelectFileToRun.Click += new System.EventHandler(this.btSelectFileToRun_Click);
             // 
+            // chbCloseAfterRun
+            // 
+            this.chbCloseAfterRun.AutoSize = true;
+            this.chbCloseAfterRun.Checked = true;
+            this.chbCloseAfterRun.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbCloseAfterRun.Location = new System.Drawing.Point(4, 142);
+            this.chbCloseAfterRun.Name = "chbCloseAfterRun";
+            this.chbCloseAfterRun.Size = new System.Drawing.Size(188, 17);
+            this.chbCloseAfterRun.TabIndex = 9;
+            this.chbCloseAfterRun.Text = "Закрыть утилиту после запуска";
+            this.chbCloseAfterRun.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 257);
+            this.ClientSize = new System.Drawing.Size(407, 337);
+            this.Controls.Add(this.chbCloseAfterRun);
             this.Controls.Add(this.btSelectFileToRun);
             this.Controls.Add(this.tbStartFilePath);
             this.Controls.Add(this.chbStartFile);
@@ -203,6 +222,7 @@
         private System.Windows.Forms.CheckBox chbStartFile;
         private System.Windows.Forms.TextBox tbStartFilePath;
         private System.Windows.Forms.Button btSelectFileToRun;
+        private System.Windows.Forms.CheckBox chbCloseAfterRun;
     }
 }
 
