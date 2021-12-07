@@ -184,10 +184,11 @@ namespace BadProcessHunter
             {
                 AddMessage("Запускаем: " + startFilePath);
                 hunter.StartProcess(startFilePath);
-                AddMessage("Закрываем утилиту");
-                Thread.Sleep(2000);
+                
                 if (chbCloseAfterRun.Checked)
                 {
+                    AddMessage("Закрываем утилиту");
+                    Thread.Sleep(2000);
                     this.Close();
                 }
             }

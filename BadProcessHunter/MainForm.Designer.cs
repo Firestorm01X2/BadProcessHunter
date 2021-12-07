@@ -95,12 +95,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbInfo.BackColor = System.Drawing.SystemColors.Window;
-            this.tbInfo.Location = new System.Drawing.Point(4, 188);
+            this.tbInfo.Location = new System.Drawing.Point(4, 165);
             this.tbInfo.Multiline = true;
             this.tbInfo.Name = "tbInfo";
             this.tbInfo.ReadOnly = true;
             this.tbInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbInfo.Size = new System.Drawing.Size(391, 137);
+            this.tbInfo.Size = new System.Drawing.Size(391, 160);
             this.tbInfo.TabIndex = 4;
             // 
             // nudCheclInterval
@@ -172,14 +172,13 @@
             // chbCloseAfterRun
             // 
             this.chbCloseAfterRun.AutoSize = true;
-            this.chbCloseAfterRun.Checked = true;
-            this.chbCloseAfterRun.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chbCloseAfterRun.Location = new System.Drawing.Point(4, 142);
             this.chbCloseAfterRun.Name = "chbCloseAfterRun";
             this.chbCloseAfterRun.Size = new System.Drawing.Size(188, 17);
             this.chbCloseAfterRun.TabIndex = 9;
             this.chbCloseAfterRun.Text = "Закрыть утилиту после запуска";
             this.chbCloseAfterRun.UseVisualStyleBackColor = true;
+            this.chbCloseAfterRun.Visible = false;
             // 
             // MainForm
             // 
